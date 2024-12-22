@@ -102,8 +102,7 @@ jobs:
           #   org.opencontainers.image.description='Sts server multi-arch'
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          output: type=image,name=target,annotation-index.org.opencontainers.image.description='Sts server multi-arch'
-
+          output: metadata,digest,imageid
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
       # repository is public to avoid leaking data.  If you would like to publish
