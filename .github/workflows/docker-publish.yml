@@ -49,8 +49,8 @@ jobs:
       - name: Install cosign
         if: github.event_name != 'pull_request'
         uses: sigstore/cosign-installer@v3.7.0 #v3.7.0
-        with:
-          cosign-release: 'v3.7.0'
+        # with:
+        #   cosign-release: 'v3.7.0'
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
