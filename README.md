@@ -19,7 +19,7 @@
    ```
 1. Run local
    ```bash
-   docker run --env-file=./test.env -d -p 80:80 sts-server 
+   docker run --env-file=./test.env -d -p 80:80 ghcr.io/fdiskbrain/sts-server
    ```
 1. Check the result
    ```bash
