@@ -5,8 +5,8 @@ RUN apt update \
     && apt clean all
 ## Reference release https://github.com/aliyun/aliyun-cli/releases/
 ## https://github.com/aliyun/aliyun-cli/releases/download/v3.0.188/aliyun-cli-linux-3.0.188-amd64.tgz
-ENV VERSION=3.0.240
 RUN CLI_ARCH=$(uname -m|sed -e 's/aarch64/arm64/g' -e 's/x86_64/amd64/g') \
+    && VERSION=3.0.240 \
     && wget https://github.com/aliyun/aliyun-cli/releases/download/v${VERSION}/aliyun-cli-linux-${VERSION}-${CLI_ARCH}.tgz \
     && tar zxvf aliyun-cli-linux-3.0.188-${CLI_ARCH}.tgz \
     && mv aliyun /usr/bin/ \
