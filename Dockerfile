@@ -1,4 +1,4 @@
-FROM openresty/openresty:1.19.9.1-2-buster-fat
+FROM openresty/openresty:1.29.2.3-bookworm-fat
 WORKDIR /
 RUN apt update \
     && apt install wget jq  -y \
